@@ -1,6 +1,7 @@
 #include <iostream>
-#include "SqList/SqList.h"
-#include "LinkList/LinkList.h"
+//#include "SqList/SqList.h"
+//#include "LinkList/LinkList.h"
+#include "tree/BiTree.h"
 
 
 int main() {
@@ -20,9 +21,14 @@ int main() {
 //    PrintList(L);
 
 //    LinkList L = LinkListHeadInsert(5);
-    LinkList L = LinkListTailInsert(20);
-    LNode *p = LocateElem(L, 4);
-    PrintLinkList(L);
-    std::cout << p->data << std::endl;
-    std::cout << p->next->data << std::endl;
+//    LinkList L = LinkListTailInsert(20);
+//    LNode *p = LocateElem(L, 4);
+//    PrintLinkList(L);
+//    std::cout << p->data << std::endl;
+//    std::cout << p->next->data << std::endl;
+
+    BiTree T = InitBST(20);
+    PreOrder(T);
+    std::cout << "\n" << std::endl;
+    InOrder(T);
 }
