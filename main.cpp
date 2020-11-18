@@ -1,8 +1,8 @@
 #include <iostream>
 //#include "SqList/SqList.h"
 //#include "LinkList/LinkList.h"
-#include "tree/BiTree.h"
-
+//#include "tree/BiTree.h"
+#include "graph/Graph.h"
 
 int main() {
 
@@ -27,8 +27,14 @@ int main() {
 //    std::cout << p->data << std::endl;
 //    std::cout << p->next->data << std::endl;
 
-    BiTree T = InitBST(20);
-    PreOrder(T);
-    std::cout << "\n" << std::endl;
-    InOrder(T);
+//    BiTree T = InitBST(6);
+//    PreOrder(T);
+//    std::cout << "\n";
+//    InOrder(T);
+//    LevelOrder(T);
+
+    ALGraph G = InitUndirectedGraph();
+//    BFSTraverse(G);
+//    BFSMinDistance(G, 1);
+    DFSTraverse(G);
 }

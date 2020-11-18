@@ -32,7 +32,7 @@ BiTree InitBiTree() {
 
 // 访问一个二叉树结点
 void visit(BiTree p) {
-    std::cout << p->data << std::endl;
+    std::cout << p->data << " -> ";
 }
 
 // 先序遍历
