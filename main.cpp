@@ -2,7 +2,9 @@
 //#include "SqList/SqList.h"
 //#include "LinkList/LinkList.h"
 //#include "tree/BiTree.h"
-#include "graph/Graph.h"
+//#include "graph/Graph.h"
+//#include "search/search.h"
+#include "sort/sort.h"
 
 int main() {
 
@@ -33,8 +35,20 @@ int main() {
 //    InOrder(T);
 //    LevelOrder(T);
 
-    ALGraph G = InitUndirectedGraph();
+//    ALGraph G = InitUndirectedGraph();
 //    BFSTraverse(G);
 //    BFSMinDistance(G, 1);
-    DFSTraverse(G);
+//    DFSTraverse(G);
+
+//    SSTable T = InitTable(20);
+//    PrintTable(T);
+//    BinSearch(T, 10);
+
+    SqList L = InitSortTable(90000);
+    PrintSortTable(L);
+//    BubbleSort(L);
+//    QuickSort(L, 1, L.length - 1);
+//    BuildMaxHeap(L);
+    HeapSort(L);
+    PrintSortTable(L);
 }
