@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include <zconf.h>
 #include "LinkList.h"
 
 
@@ -18,7 +19,8 @@ LinkList LinkListHeadInsert(int length) {
     while (length--) {
         unsigned seed = clock();
         srand(seed);
-        x = (rand() % (50 + 1));
+        x = (rand() % (10 + 1));
+        usleep(1);
 
         s = (LNode *)malloc(sizeof(LNode));
         s->data = x;

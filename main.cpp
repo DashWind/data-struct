@@ -1,10 +1,10 @@
 #include <iostream>
 //#include "SqList/SqList.h"
-//#include "LinkList/LinkList.h"
+#include "LinkList/LinkList.h"
 //#include "tree/BiTree.h"
 //#include "graph/Graph.h"
 //#include "search/search.h"
-#include "sort/sort.h"
+//#include "sort/sort.h"
 
 int main() {
 
@@ -28,6 +28,29 @@ int main() {
 //    PrintLinkList(L);
 //    std::cout << p->data << std::endl;
 //    std::cout << p->next->data << std::endl;
+    LinkList L = LinkListHeadInsert(10);
+    PrintLinkList(L);
+//    IncreaseOut(L);
+    LinkList A = (LinkList)malloc(sizeof(LNode));
+    LinkList B = (LinkList)malloc(sizeof(LNode));
+    SpiltLinkList(L, A, B);
+    PrintLinkList(A);
+    PrintLinkList(B);
+    PrintLinkList(L);
+
+
+//    LNode *p = L, *q;
+//    for (p; p->next!= nullptr; p=p->next)
+//        if (p->data == 10)
+//            q = p;
+//    p->next = q;
+//    PrintLinkList(L);
+//    LNode *r = RingEntrance(L);
+//    std::cout << r->data <<std::endl;
+//    std::cout << r->next->data <<std::endl;
+//    PrintLinkList(L);
+//    DeleteX(L, 10);
+//    PrintLinkList(L);
 
 //    BiTree T = InitBST(6);
 //    PreOrder(T);
@@ -44,11 +67,11 @@ int main() {
 //    PrintTable(T);
 //    BinSearch(T, 10);
 
-    SqList L = InitSortTable(90000);
-    PrintSortTable(L);
+//    SqList L = InitSortTable(90000);
+//    PrintSortTable(L);
 //    BubbleSort(L);
 //    QuickSort(L, 1, L.length - 1);
 //    BuildMaxHeap(L);
-    HeapSort(L);
-    PrintSortTable(L);
+//    HeapSort(L);
+//    PrintSortTable(L);
 }
